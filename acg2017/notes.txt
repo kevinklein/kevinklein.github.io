@@ -1,0 +1,33 @@
+From: Emily Garel [mailto:EGarel@gi.org] 
+Sent: Wednesday, October 19, 2016 2:36 PM
+To: Toufic Rahman; Toufic Rahman
+Subject: FW: ACG Website Redesign
+ 
+http://www.inbound.com/
+ 
+ 
+The attached PDF has been updated somewhat from the the initial PDF sent back in August. Inbound is the main site that I pulled homepage inspiration from. I also pulled some inspiration from last year’s Mobile World Congress site. The quick link boxes will start off as a duotone image, then when you hover over them, the images will change to color images. Like the Inbound site, for the 2017 Meeting website, we plan to include a short video. This won’t be added until after the video has been produced, so for now we’ll just need to include a photo. I also like how the schedule-at-glance is overly simplified on the homepage and is easy to follow. The one we currently have needs a little bit of love so it’s easier to read. Maybe some thin dividing rules between the content. I like the social media portion in the footer. It’s simple and easy-to-read. I’m still thinking about subpages, and will get back to you on those.
+ 
+For mobile: My goal is to keep the mobile version as simplified as possible and reduce the vertical scrolling. I want the schedule-at-a-glance to hide two of the columns and only show three items. I want the Twitter feed to hide two of the posts and the Twitter post to change in the speech bubble. 
+
+1.       http://www.worldcongressacg2017.org/ - Is the site we registered and put up an image right now on it so we have something
+2.       See attached mockup that ACG came up with to give ideas. But here’s some additional info on it that we are thinking of doing that might help you.
+
+Emily is still refining this but this will give you an idea of the direction we are going.  We envision the quick links to be something like: Meet the Faculty and Planning Committee, which will open and feature the planning committee chairs, course directors and hands-on directors - photos added - we want to share the international collaboration so highlighting the committee and faculty is important; What to Do and See in Orlando which will highlight attractions; Browse the Educational Sessions which will feature the educational sessions - it's also going to be a link in the top toolbar;  Hands-on Endoscopy sessions which will highlight the hands-on endoscopy sessions are free - very popular among internationals and that these are included in the registration fee is huge since DDW does not offer this; and so on. I haven't identified all 6 but we can decide what we want the 6 to be.
+The top toolbar will be similar to what we have now.   If possible, I'd like to see the schedule at a glance with links or pop-up windows, so folks can click and get more information on an activity/event.
+I asked Emily about trying the photo behind the logo in a blue monotone or duotone or just a black and white photo. If we have the sizzle reel/video running in the background, we might not want the logo in the center. We won't have the video until after ACG 2016.
+ 
+3.       Comments on  http://adjunctweb.com/clients/gi.org/acg2017.php that will apply to the 2017 ACG/WGO Site:
+a.       I think we are heading in the right direction. I do think there is too much space being used for the blue box and the city photo. I would like to see more on actual issues or topics right there front and center. More of the box design we have been exploring for the main web site. More like https://www.ueg.eu/week/
+b.      Add the word “Meeting” after “Scientific” here….
+cid:image003.jpg@01D1FD4B.23C606D0
+ 
+c.             Add the social media icons below the blue “Contact Us” button - YouTube, LinkedIn, Facebook Twitter – and Instagram
+ 
+cid:image005.jpg@01D1FD4B.23C606D0
+ 
+Like this….cid:image007.jpg@01D1FD4B.23C606D0 add Instagram
+ 
+d.      Underneath the social media icons, add the hashtag for the meeting: #ACG2017
+ 
+e.            Minor edit – ACG Blog (singular) instead of Blogs (plural)
