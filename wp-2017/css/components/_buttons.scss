@@ -1,0 +1,29 @@
+.btn-outline {
+    background: transparent;
+    color: #721116;
+    border: 2px solid #721116;
+    display: inline-block;
+    font-family: "Campton-SemiBold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 65px;
+    letter-spacing: 1.5px;
+    line-height: 1.25;
+    padding: 7px 38px 9px;
+    margin-bottom: 15px;
+    &:hover {
+        background: #e56349;
+        color: #fff;
+    }
+}
+
+.btn-outline-inverse,
+.btn-outline-inverse:hover {
+    background: transparent;
+    border: 2px solid #FFF;
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        opacity: .7;
+    }
+}

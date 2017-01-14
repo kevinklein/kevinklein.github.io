@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,800");
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, b {
+    font-family: "Campton-Bold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.hdr {
+    font-size: 20px;
+}
+
+.hdr-rule {
+    border-top: 1px solid #adada6;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 2px 0 40px;
+    &-inverse {
+        border-color: #fff;
+    }
+}
+
+.h1 {
+    font-size: $font-size-x-lg;
+    line-height: 1.1;
+}
+
+.h2 {
+    font-size: $font-size-lg;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-size: ($font-size-md + 4);
+    line-height: 1.2;
+}
+
+.h4 {
+    font-size: $font-size-md;
+    line-height: 1.35;
+}
+
+.text-campton {
+    font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+
+.text-campton-semibold {
+    font-family: "Campton-SemiBold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+
+.text-campton-bold {
+    font-family: "Campton-Bold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+
+.text-noto {
+    font-family: "Noto Serif", Georgia, "Times New Roman", "DejaVu Serif", serif;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-orange {
+    color: $orange;
+}
+
+.text-orange-light {
+    color: $orange-light;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-gray-lighter {
+    color: $gray-lighter;
+}
+
+.text-gray-light {
+    color: $gray-light;
+}
+
+.text-gray-dark {
+    color: $gray-dark;
+}
+
+.text-red {
+    color: $red;
+}
+
+.text-blue-light {
+    color: $blue-light;
+}
+
+.text-blue {
+    color: $blue;
+}
+
+.text-inverse {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}
+
+.text {
+    font-size: $font-size-base;
+}
+
+.text-xs {
+    font-size: $font-size-xs;
+}
+
+.text-normal {
+    font-size: ($font-size-sm - 2);
+}
+
+.text-sm {
+    font-size: $font-size-sm;
+}
+
+.text-md {
+    font-size: $font-size-md;
+}
+
+.text-lg {
+    font-size: $font-size-lg;
+}
+
+.text-x-lg {
+    font-size: $font-size-x-lg;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-underline {
+    display: inline-block;
+    position: relative;
+    &:after {
+        background: currentcolor;
+        bottom: -3px;
+        display: block;
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+// lists
+.list-ordered {
+	counter-reset: list-counter;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-ordered li {
+    margin: 0;
+	position: relative;
+	padding: 0 0 0 80px;
+}
+
+.list-ordered li:before {
+    background: rgba(#000,.2);
+	content: counter(list-counter);
+	counter-increment: list-counter;
+	position: absolute;
+	width: 54px;
+	height: 54px;
+	line-height: 54px;
+	border-radius: 50%;
+	left: 0;
+	top: 9px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.list-ordered li + li {
+    margin-top: 60px;
+}

@@ -1,0 +1,147 @@
+#header {
+    color: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    padding: 2%;
+}
+
+#header a#logo {
+    display: block;
+    width: 175px;
+    max-width: 40%;
+    text-indent: -1000px;
+    overflow: hidden;
+    height: 43px;
+    background-image: url(../img/logo_horizontal.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section {
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.4;
+    position: relative;
+}
+
+.section-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { //fix for IE10 not flexing center verticially
+    .section-flex { padding-top: 5%; } 
+}
+
+.section-parallax {
+    background: transparent;
+    background-position: 50% 50%;
+    height: calc(100vh - 100px);
+}
+
+@media screen and (max-width: 60em) {
+    .section-parallax {
+        //box-shadow: inset 0 0 200px 200px rgba(0,0,0,.2);
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-red {
+   background-color: $red;
+}
+
+.bg-orange {
+   background-color: $orange;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-gray {
+   background-color: $gray;
+}
+
+.bg-gray-lighter {
+   background-color: $gray-lighter;
+}
+
+.bg-blue {
+   background-color: $blue;
+}
+
+.section-map {
+    background: $blue url(../img/map.png) no-repeat 50% 0;
+    background-size: 598px 304px;
+}
+
+.members {
+    background: url(../img/members.png) no-repeat 50% 50%;
+    background-size: cover;
+    height: 55px;
+}
+
+.flag {
+    margin-left: 10px;
+    position: relative;
+    top: 8px;
+}
+
+.img-items {
+    img {
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 47.9em) {
+    .members-img {
+        display: none;
+    }
+    .members {
+        display: block;
+    }
+    .container,
+    .container-md,
+    .container-sm {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .members-img {
+        display: block;
+    }
+    .members {
+        display: none;
+    }
+    .display-table {
+        display: table;
+        width: 100%;
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .container {
+        margin: 0 auto;
+        width: 982px;
+    }
+    
+    .container-md {
+        margin: 0 auto;
+        width: 814px;
+    }
+    
+    .container-sm {
+        margin: 0 auto;
+        width: 680px;
+    }
+}
