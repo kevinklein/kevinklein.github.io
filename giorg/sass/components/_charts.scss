@@ -1,0 +1,43 @@
+.chart-doughnut-container {
+    margin: 0 auto;
+    padding: 0;
+	position: relative;
+	text-align: center;
+	width: 175px;
+	.chart-doughnut-middle {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+    	display: flex;
+    	flex-direction:column;
+    	align-items: center;
+    	justify-content: center;
+    	z-index: 1;
+    	opacity: 0;
+        transition: opacity ease-in-out .45s;
+        &.is-fadedin {
+            opacity: 100;
+        }
+	}
+	.chart-doughnut {
+    	position: relative;
+    	z-index: 2;
+	}
+}
+
+.chart-legend {
+	@include clearfix;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		float: left;
+		width: 50%;
+		> span {
+			display: inline-block;
+			height: 14px;
+			margin-right: 5px;
+			width: 14px;
+		}
+	}
+}

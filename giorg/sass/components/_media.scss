@@ -1,0 +1,80 @@
+.flexbox .media {
+    display: flex;
+}
+
+.flexbox .media-body {
+    flex: 1;
+}
+
+@supports (display: flex) {
+    .media {
+        display: flex;
+    }
+    .media-body {
+        flex: 1;
+    }
+}
+
+.media-middle {
+    align-items: center;
+}
+
+.media .media-middle {
+    align-self: center;
+}
+
+.no-flexbox .media {
+    &:first-child {
+      margin-top: 0;
+    }
+    .media,
+    .media-body {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .media-body {
+        width: 10000px;
+    }
+    .media-left,
+    .media-right,
+    .media-body {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .media-middle {
+        vertical-align: middle;
+    }
+    .media-bottom {
+        vertical-align: bottom;
+    }
+}
+
+.media + .media {
+    margin-top: 1em;
+}
+
+//
+// Images/elements as the media anchor
+//
+
+.media-object {
+  display: block;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  &.img-thumbnail {
+    max-width: none;
+  }
+}
+
+.media-right {
+  padding-left: 10px;
+}
+
+.media-left {
+  padding-right: 10px;
+}
+
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}

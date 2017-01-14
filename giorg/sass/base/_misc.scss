@@ -1,0 +1,363 @@
+img {
+    max-width: 100%;
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.br-a-0 { border-radius: 0 !important; }
+.br-tl-0 { border-top-left-radius: 0 !important; }
+.br-tr-0 { border-top-right-radius: 0 !important; }
+.br-bl-0 { border-bottom-left-radius: 0 !important; }
+.br-br-0 { border-bottom-right-radius: 0 !important; }
+
+.br-a-sm { border-radius: $border-radius-sm !important; }
+.br-tl-sm { border-top-left-radius: $border-radius-sm !important; }
+.br-tr-sm { border-top-right-radius: $border-radius-sm !important; }
+.br-bl-sm { border-bottom-left-radius: $border-radius-sm !important; }
+.br-br-sm { border-bottom-right-radius: $border-radius-sm !important; }
+
+.border-all {
+    border: 1px solid rgba(#000,.15);
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-top {
+    border-top: 1px solid rgba(#000,.15);
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-right {
+    border-right: 1px solid rgba(#000,.15);
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(#000,.15);
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-left {
+    border-left: 1px solid rgba(#000,.15);
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-inverse {
+    border-color: rgba(#fff,.15) !important;
+    .text-inverse & {
+        border-color: rgba(#fff,.15);
+    }
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.display-block {
+	display: block !important;
+	&button {
+    	width: 100%;
+	}
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+@include media-breakpoint-down(sm) {
+    .display-sm-block {
+        display: block !important;
+        float: none !important;
+    }
+    button.display-sm-block {
+    	width: 100%;
+	}
+}
+
+@include media-breakpoint-up(md) {
+    .display-md-block {
+        display: block !important;
+        float: none !important;
+    }
+    button.display-md-block {
+    	width: 100%;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+    .display-lg-block {
+        display: block !important;
+        float: none !important;
+    }
+    button.display-lg-block {
+    	width: 100%;
+	}
+}
+
+.display-inline-flex {
+	display: inline-flex !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.shadow {
+    @include shadow;
+}
+
+.nowrap-sm {
+    white-space: nowrap;
+}
+
+[data-url],
+[data-url] td {
+    cursor: pointer;
+}
+
+@include media-breakpoint-up(sm) {
+    .nowrap {
+        white-space: nowrap;
+    }
+}
+
+.hr-lg {
+    height: 3px;
+    background: $brand-dark;
+}
+
+.hr-div {
+    background: rgba(#000,.5);
+    border: none;
+    height: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 5rem;
+    .text-inverse & {
+        background: rgba(#fff,.5);
+    }
+}
+
+.hr-div-centered {
+    margin-left: 45%;
+    margin-right: 45%;
+    max-width: none;
+}
+
+.circle,
+.circle-outline {
+    @include flex-center;
+    border: none; //for use as a button
+    padding: 0; //for use as a button
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    line-height: 1;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+}
+
+.circle-sm,
+.circle-outline-sm {
+    font-size:.75rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.circle-outline {
+    border: .0625rem solid currentColor;
+}
+
+.circle-md,
+.circle-outline-md {
+    font-size:1.3rem;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.circle-lg,
+.circle-outline-lg {
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.no-touch .hover-transition {
+    transition: all .15s ease-in-out;
+}
+
+.bg-white,
+.hover-bg-white:hover {
+	background-color: #fff;
+}
+
+.bg-black {
+    background-color: $brand-black;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-gray-light {
+    background-color: $gray-light;
+}
+
+.bg-gray-lighter,
+.container-grey {
+    background-color: $gray-lighter;
+}
+
+.bg-gray-lightest,
+.hover-bg-gray-lightest:hover {
+    background-color: $gray-lightest;
+}
+
+.bg-gray-dark {
+    background-color: $gray-dark;
+}
+
+.bg-gray-darker {
+    background-color: $gray-darker;
+}
+
+.bg-dark {
+    background-color: $brand-dark;
+}
+
+.bg-primary {
+    background-color: $brand-primary;
+}
+
+.bg-secondary,
+.hover-bg-secondary:hover {
+    background-color: $brand-secondary;
+}
+
+.bg-tertiary {
+    background-color: $brand-tertiary;
+}
+
+.bg-secondary-dark {
+    background-color: $brand-secondary-dark;
+}
+
+.bg-secondary-darker {
+    background-color: $brand-secondary-dark;
+}
+
+.bg-info {
+    background-color: $brand-info;
+}
+
+.bg-info-dark {
+    background-color: $brand-info;
+}
+
+.bg-info-light {
+    background: $brand-info-dark;
+}
+
+.bg-info-lighter {
+    background-color: $brand-info-lighter;
+}
+
+.bg-success {
+    background-color: $brand-success;
+}
+
+.bg-warning {
+    background-color: $brand-warning;
+}
+
+.bg-danger {
+    background-color: $brand-danger;
+}
+
+.bg-info-lightest {
+    background-color: lighten($brand-info-lighter,1%);
+}
+
+.bg-opaque-dark,
+.no-touch .hover-bg-opaque-dark:hover {
+    background-color: rgba(#000,.15);
+    border-color: rgba(#000,.05);
+    box-shadow: none;
+}
+
+.bg-opaque-white,
+.bg-opaque-light,
+.no-touch .hover-bg-opaque-light:hover {
+    background-color: rgba(#fff,.15);
+    border-color: rgba(#fff,.05);
+    box-shadow:none;
+}
+
+.bg-transparent {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.bg-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.tab-pane-border {
+    background: #fff;
+    border: 1px solid $nav-tabs-border-color;
+    border-top: 0;
+    padding: $spacer-y $spacer-x;
+}
+
+.is-selected,
+.is-selected td {
+    border-color: $btn-success-bg;
+    background: lighten($btn-success-bg,40%);
+}
+
+.is-hidden {
+    display: none;
+}

@@ -1,0 +1,428 @@
+//
+// Base styles
+//
+
+.btn {
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: $border-width solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+    @include transition(all .2s ease-in-out);
+    
+    &,
+    &:active,
+    &.active {
+    &:focus,
+    &.focus {
+        @include tab-focus();
+    }
+    }
+    
+    @include hover-focus {
+        text-decoration: none;
+    }
+    &.focus {
+        text-decoration: none;
+    }
+    
+    &:active,
+    &.active {
+        background-image: none;
+        outline: 0;
+        @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+    
+    &.disabled,
+    &:disabled,
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        opacity: .65;
+        @include box-shadow(none);
+    }
+}
+
+.btn b,
+.btn strong {
+    font-weight: 600;
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disaabled,
+fieldset[disabled] a.btn {
+    pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-secondary {
+    @include button-variant($brand-secondary, $brand-secondary, $brand-secondary);
+}
+.btn-tertiary {
+    @include button-variant($brand-tertiary, $brand-tertiary, $brand-tertiary);
+}
+.btn-white {
+    @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+}
+.btn-info {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-success {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-warning {
+    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-orange {
+    @include button-variant(#fff, $brand-orange, $brand-orange);
+}
+
+// Remove all backgrounds
+.btn-primary-outline {
+    @include button-outline-variant($btn-primary-bg,$btn-primary-bg);
+}
+.btn-white-outline {
+    @include button-outline-variant($btn-white-border,$btn-info-bg);
+    color: $gray;
+}
+.btn-info-outline {
+    @include button-outline-variant($btn-info-bg,$btn-info-bg);
+}
+.btn-success-outline {
+    @include button-outline-variant($btn-success-bg,$btn-success-bg);
+}
+.btn-warning-outline {
+    @include button-outline-variant($btn-warning-bg,$btn-warning-bg);
+}
+.btn-danger-outline {
+    @include button-outline-variant($btn-danger-bg,$btn-danger-bg);
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+    font-weight: normal;
+    color: $link-color;
+    border-radius: 0;
+    line-height: 1;
+    
+    &,
+    &:active,
+    &.active,
+    &:disabled,
+        fieldset[disabled] & {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    &,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+    @include hover {
+        border-color: transparent;
+    }
+    @include hover-focus {
+        color: $link-hover-color;
+        //text-decoration: $link-hover-decoration;
+        background-color: transparent;
+        opacity: .8;
+    }
+    &:disabled,
+        fieldset[disabled] & {
+        @include hover-focus {
+            color: $btn-link-disabled-color;
+            text-decoration: none;
+        }
+    }
+}
+
+.no-outline:active,
+.no-outline:focus {
+    outline: none;
+}
+
+.text-inverse .btn-link,
+.btn-link.text-inverse {
+    color: #fff;
+}
+
+.btn-link.text-muted {
+    color: $text-muted;
+    &:hover {
+        color: $gray-base;
+    }
+}
+
+.btn-link.active {
+    color: #000;
+    font-weight: bold;
+}
+
+//
+// Button Sizes
+//
+
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(($btn-padding-y-lg * 1.25), ($btn-padding-x-lg * 1.25), ($font-size-lg * 1.25), ($line-height-lg * 1.25), $btn-border-radius-lg);
+}
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+.btn-xs {
+    @include button-size(($btn-padding-y-sm * .8), ($btn-padding-x-sm * .8), ($font-size-sm * .8), $line-height-sm, $border-radius-xs);
+}
+//
+// Block button
+//
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+
+@mixin btn-styles($btn-color: #fff) {
+    @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 7%));
+    @include reset-filter; // Disable gradients for IE9 because filter bleeds through rounded corners; see https://github.com/twbs/bootstrap/issues/10620
+    background-repeat: repeat-x;
+    border-color: darken($btn-color, 22%);
+    
+    &:hover,
+    &:focus  {
+        @include gradient-vertical($start-color: $btn-color, $end-color: darken($btn-color, 11%));
+        border-color: darken($btn-color, 28%);
+    }
+    
+    &:active,
+    &.active {
+        background: darken($btn-color, 12%);
+        border-color: darken($btn-color, 34%);
+    }
+    
+    &:disabled,
+    &[disabled] {
+        background: #f3f3f3 !important;
+        border-color: #eee !important;
+        color: #999 !important;
+        text-shadow: none !important;
+    }
+}
+
+.btn-default { 
+    @include btn-styles; 
+    color: $text-color;
+    text-shadow: none;  
+}
+
+.btn-default-inverse { 
+    @include btn-styles(lighten($brand-dark,18%)); 
+    color: #fff;
+    text-shadow: none; 
+    &:hover {
+        color: #eee;
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: $gray-lighter;
+    color: $text-color;
+    @include hover-focus {
+        background: $gray-lighter;
+    }
+}
+
+.btn-outline-inverse {
+    background: transparent;
+    border-color: #fff;
+    color: inherit;
+    @include hover-focus {
+        background: $brand-info;
+        border-color: $brand-info;
+    }
+}
+
+.btn-white {
+    background: #fff;
+    color: $text-color;
+}
+
+.btn-pill {
+    border-radius: 1.3em;
+}
+
+.btn-opaque-light {
+    background: rgba(#fff,.18);
+    &:hover {
+        background: rgba(#000,.35);
+    }
+}
+
+.btn-opaque-dark {
+    background: rgba(#000,.18);
+    &:hover {
+        background: rgba(#000,.35);
+    }
+}
+
+.btn-square-outline {
+    border-width: 2px;
+} 
+
+.btn.disabled,
+.btn:disabled,
+.btn[disabled] {
+    background: #f3f3f3 !important;
+    border-color: rgba(#000,.1) !important;
+    color: #999 !important;
+    text-shadow: none !important;
+}
+
+.btn-text {
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+.btn-no-focus {
+    &:focus,
+    &:active {
+        outline: none !important;
+    }
+}
+
+.toggle-target-plus-minus.is-selected {
+    background: $gray-lighter;
+    border-radius: $border-radius $border-radius 0 0;
+}
+
+@include media-breakpoint-up(md) {
+    .btn-group-main .btn.active {
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: inherit;
+            transform: rotate(45deg);
+            left: calc(50% - 6px);
+            top: calc(100% - 5px);
+            z-index: -1;
+        }
+        &:after {
+            background: rgba(#000,.2);
+            border-radius: $border-radius-sm $border-radius-sm 0 0;
+            box-sizing: content-box;
+            content: '';
+            display: block;
+            height: .25rem;
+            left: -$border-width;
+            right: -$border-width;
+            padding-left: $border-width;
+            padding-right: $border-width;
+            top: -$border-width;
+            position: absolute;
+            width: 100%;
+        }
+    }
+    
+    .btn-group-main .btn-default.active:before {
+        border-right: 1px solid darken(#fff, 34%);
+        border-bottom: 1px solid darken(#fff, 34%);
+    }
+    
+    .btn-group-main .btn-secondary.active:before { 
+        border-right: 1px solid #adadad;
+        border-bottom: 1px solid #adadad;
+    }
+    
+    .btn-group-main .btn-default.active,
+    .btn-group-main .btn-secondary.active {
+        color: rgba(0,0,0,.5);
+    }
+    
+    .btn-group-main .btn.active:after {
+        border-radius: 0;
+    }
+    
+    .btn-group-main .btn.active:last-of-type:after {
+        border-top-right-radius: $border-radius-sm;
+    }
+    
+    .btn-group-main .btn.active:first-of-type:after {
+        border-top-left-radius: $border-radius-sm;
+    }
+}
+
+.btn-group .btn-link {
+	background-color: $pagination-bg;
+	color: $pagination-color;
+	padding: $pagination-padding-y $pagination-padding-x;
+	text-decoration: none;
+}
+
+.btn-group .btn-link.active {
+    border:1px solid $pagination-active-border;
+    color: $pagination-active-color;
+	cursor: default;
+	background-color: $pagination-active-bg;
+	border-color: $pagination-active-border;
+}
+
+.hide-label {
+    .show-label {
+        opacity: 0;
+        position: absolute;
+        min-width: 20rem;
+        text-align: left;
+        transition: opacity .15s;
+    }
+}
+
+.hide-label:hover {
+    .show-label {
+        opacity: .5;
+    }
+}

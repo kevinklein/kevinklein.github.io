@@ -1,0 +1,224 @@
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: relative;
+  padding: 0;
+  @include clearfix;
+}
+
+
+// Navbar alignment options
+//
+// Display the navbar across the entirety of the page or fixed it to the top or
+// bottom of the page.
+
+// Static top (unfixed, but 100% wide) navbar
+.navbar-static-top {
+  z-index: $zindex-navbar;
+
+  @include media-breakpoint-up(sm) {
+    @include border-radius(0);
+  }
+}
+
+// Fix the top/bottom navbars when screen real estate supports it
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: $zindex-navbar-fixed;
+  margin-bottom: 0; // override .navbar defaults
+}
+
+.navbar-fixed-top {
+  top: 0;
+}
+
+.navbar-fixed-bottom {
+  bottom: 0;
+}
+
+.navbar-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: $zindex-navbar-sticky;
+  width: 100%;
+
+  // Undo the rounded corners
+  @include media-breakpoint-up(sm) {
+    @include border-radius(0);
+  }
+}
+
+// animated burger menu to x
+.menu-icon {
+    //box-shadow: inset 0 0 0 1px #fff;
+	position: relative;
+	display:  inline-block;
+	margin-right: 2px;
+	width: 20px;
+	height: 16px;
+}
+
+.menu-icon span, 
+.menu-icon span:before, 
+.menu-icon span:after {
+	width: 20px;
+	height: 3px;
+	background-color: #fff;
+	display: block;
+}
+
+.menu-icon.menu-icon-staggered span {
+    width: 17px;
+}
+
+.menu-icon.menu-icon-staggered span:before {
+    width: 20px;
+} 
+
+.menu-icon.menu-icon-staggered span:after {
+    width: 14px;
+}
+
+.menu-icon span {
+    left: 0;
+	margin: 0 auto;
+	position: relative;
+	top: 9px;
+}
+
+.menu-icon span:before, 
+.menu-icon span:after {
+	position: absolute;
+	content: '';
+}
+
+.menu-icon span {
+    background-color: #fff;
+    opacity: .7;
+}
+
+.menu-icon span:before {
+	margin-top: -6px;
+	transform: rotate(0);
+}
+
+.menu-icon span:after {
+	margin-top: 6px;
+	transform: rotate(0);
+}
+
+// assign transitions
+.menu-icon.menu-icon-animated span {
+	transition-duration: 0s;
+	transition-delay: 0.15s;
+}
+
+.menu-icon.menu-icon-animated span:before {
+	transition-property: margin, transform;
+	transition-duration: 0.15s;
+	transition-delay: 0.15s, 0s;
+}
+
+.menu-icon.menu-icon-animated span:after {
+	transition-property: margin, transform;
+	transition-duration: 0.15s;
+	transition-delay: 0.15s, 0s;
+}
+
+// this is the x state
+.is-toggled .menu-icon.menu-icon-animated span {
+	background-color: transparent;
+	width: 20px;
+}
+
+.is-toggled .menu-icon.menu-icon-animated span:before {
+	margin-top: 0;
+	transform: rotate(45deg);
+	transition-delay: 0s, 0.15s;
+	width: 20px;
+}
+
+.is-toggled .menu-icon.menu-icon-animated span:after {
+	margin-top: 0;
+	transform: rotate(-45deg);
+	transition-delay: 0s, 0.15s;
+	width: 20px;
+}
+
+// off canvas menu toggle]
+.btn-menu-toggle { //legacy for MLC v1
+    background: $brand-primary;
+    border: none;
+    color: rgba(#fff,.8);
+    display: inline-block;
+    //font-family: $webfont-one;
+    font-size: .85rem;
+    padding: 0 1rem;
+    outline: none !important;
+    text-transform: uppercase;
+    transition: all ease-in .15s;
+    white-space: nowrap;
+    > span {
+        display: inline-block;
+        width: 0;
+        opacity: 0;
+        transition: all ease-in .15s;
+    }
+}
+
+.navbar-flex-addon-stretch {
+    align-self: stretch;
+}
+
+.navbar-flex {
+    display: flex;
+    align-items: center;
+    a:focus,
+    button a:focus {
+    	outline: none;
+	}
+}
+
+.navbar-flex-main {
+    flex: 1;
+}
+
+.navbar-hud {
+    height: $fixed-top-padding;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-navbar;
+    .navbar-horiz {
+        a {
+            color: #ccc;
+            display: inline-block;
+            height: $fixed-top-padding;
+            line-height: $fixed-top-padding;
+            padding: 0 .4rem;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .btn-link {
+        height: $fixed-top-padding;
+        line-height: $fixed-top-padding;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+.logo-acg {
+    height: 120px;
+}
+
+.logo-acg-meeting {
+    height: 90px;
+}

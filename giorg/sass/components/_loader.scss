@@ -1,0 +1,66 @@
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -800px 0
+    }
+    100%{
+        background-position: 800px 0
+    }
+}
+
+.loading {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: $brand-info-lighter;
+    background: linear-gradient(to right, #fff 8%, #f8f8f8 18%, #fff 33%);
+    background-size: 800px 200px;
+    //@include flex-center;
+    height: 240px;
+    position: relative;
+}
+
+.loader-card {
+    background: url(https://s3.amazonaws.com/images.mentor.com/support/anim-background.png) no-repeat 50% 0;
+}
+
+.loader {
+    background-size: cover;
+    height: 240px;
+    width: 100%;
+    text-align: center;
+    &:after,
+    &:before {
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: calc(50% - 10px);
+    }
+    &:before {
+        background: rgba($brand-info,.5);
+        transform: translateX(-12px);
+        animation:loader-1 alternate .5s infinite;
+        left: calc(50% - 10px);
+    }
+    &:after {
+        background: rgba($brand-dark,.5);
+        transform: translateX(12px);
+        animation:loader-2 alternate .5s infinite;
+        left: calc(50% - 10px);
+    }
+}
+
+@keyframes loader-1 {
+    0% { background: rgba($brand-info,.65); transform: translateX(-12px); }
+
+    100% { background: rgba($brand-primary,.99); transform: translateX(12px); }
+}
+
+@keyframes loader-2 {
+    0% { background: rgba($brand-dark,.99); transform: translateX(12px); }
+
+    100% { background: rgba($brand-dark,.35); transform: translateX(-12px); }
+}

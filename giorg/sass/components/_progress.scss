@@ -1,0 +1,210 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes {
+    from  { background-position: 40px 0; }
+    to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+    from  { background-position: 40px 0; }
+    to    { background-position: 0 0; }
+}
+
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: $progress-bg;
+    position: relative;
+}
+
+.progress-total {
+    font-size: .8rem;
+    line-height: 20px;
+    color: $progress-bar-color;
+    right: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+// Bar of progress
+.progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: .8rem;
+    line-height: 20px;
+    color: $progress-bar-color;
+    text-align: center;
+    background-color: $progress-bar-bg;
+    @include transition(width .6s ease);
+    position: relative;
+    z-index: 3;
+}
+
+.progress-sm {
+    height: 10px;
+    .progress-bar {
+        line-height: 10px;   
+    }
+}
+
+.progress-xs {
+    height: 3px;
+    .progress-bar {
+        line-height: 3px;   
+    }
+}
+
+.progress-pill {
+    @extend .progress;
+    background: #aaa !important;
+    border-radius: 22px;
+    .progress-bar {
+        background-image: none !important;
+        border-radius: 21px;
+    }
+}
+
+.progress-pill-stub {
+    background: #aaa !important;
+    @extend .progress;
+    height: 30px;
+    box-shadow: none;
+    border-radius: 25px;
+    max-width: 150px;
+    position: relative;
+    text-align: center;
+    @include uc;
+    .progress-bar {
+        background-image: none !important;
+        position: relative;
+        border-radius: 24px 0 0 24px;
+        z-index: 1;
+    }
+    .progress-label {
+        color: #fff;
+        line-height: 30px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.no-cssgradients .progress {
+    min-width: 160px;
+}
+
+// Variations
+// -------------------------
+
+// Striped bars
+//
+// `.progress-striped .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar-striped` class, which you just add to an existing
+// `.progress-bar`.
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  @include gradient-striped;
+  background-size: 40px 40px;
+}
+
+// Call animation for the active one
+//
+// `.progress.active .progress-bar` is deprecated as of v3.2.0 in favor of the
+// `.progress-bar.active` approach.
+.progress.active .progress-bar,
+.progress-bar.active {
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-bar-success {
+  @include progress-bar-variant($progress-bar-success-bg);
+}
+
+.progress-bar-info {
+  @include progress-bar-variant($progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+  @include progress-bar-variant($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  @include progress-bar-variant($progress-bar-danger-bg);
+}
+
+.progress-milestones {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.progress-milestone {
+    color: #aaa;
+    display: table-cell;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    //&:after {
+    //    background: #aaa;
+    //    content: '';
+    //    display: block;
+    //    height: 6px;
+    //    margin-left: -3px;
+    //    position: absolute;
+    //    top: 0;
+    //    left: 50%;
+    //    width: 3px;
+    //}
+    //&:before {
+    //    background: #fff;
+    //    border: 3px solid #aaa;
+    //    border-radius: 50%;
+    //    content: '';
+    //    display: block;
+    //    height: 12px;
+    //    margin-left: -7px;
+    //    position: absolute;
+    //    top: 6px;
+    //    left: 50%;
+    //    width: 12px;
+    //}
+    &:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 20px;
+        margin-left: -1px;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 1px;
+        z-index: 4;
+        opacity: .5;
+    }
+    .progress-milestone-label {
+        display: block;
+        font-size: .9rem;
+        margin: -.4rem 0 -.1rem;
+    }
+}
+
+.progress-milestone.is-complete {
+    color: $brand-info;
+}

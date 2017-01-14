@@ -1,0 +1,42 @@
+Website Ideas
+
+
+https://do-it.org/ 
+like the home page layout style
+
+https://www.psychiatry.org/
+like that the site uses the entire screen
+like the responsive design
+like the home page layout style
+like the clean, simple design
+like the streamlined list in the drop downs
+like the changing side bar in each main section that has more detail than the drop down
+
+http://www.aao.org/
+like that the buttons don’t have drop downs, but when you get to the individual sections, each section has a new row of buttons and they have drop downs (although I think it is weird that you have to click the button to make the drop down appear); Also like how they deal with this in the responsive design by have a button that says Menu for the options in that section
+
+http://www.entnet.org/
+like the layout with the and the three levels of buttons at the top; well organized
+on the home page, like the sections: Featured, What’s New and then the image boxes on the right
+
+
+MORE
+
+Toufic,
+ 
+Please see the attached changes for the home page wireframe. Also, on www.acponline.org we like the cool big image box on their home page and the functionality of the box (there are 3 like you proposed for us, and they aren’t a slider, but they do move from right to left if you click on the second and third image, but the really cool thing is you can still see your other two options).
+ 
+We also like the extensive site map at the bottom of the www.acponline.org site.
+ 
+ 
+Maria
+ 
+Maria T. Susano
+Deputy Executive Director
+American College of Gastroenterology
+6400 Goldsboro Rd., Suite 200
+
+
+footage
+https://youtu.be/QMqd1zg9v10
+https://youtu.be/MvI0zYL-S2g

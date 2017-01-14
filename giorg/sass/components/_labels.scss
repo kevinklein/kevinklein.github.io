@@ -1,0 +1,197 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.label {
+  display: inline-block;
+  padding: .25rem .4rem;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: $label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .2em;
+
+  // Empty labels collapse automatically
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+a.label {
+  @include hover-focus {
+    color: $label-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// Pill labels
+
+.label-pill {
+  padding-left: .6em;
+  padding-right: .6em;
+  border-radius: 1rem;
+}
+
+// with webfont needs padding/spacing adjustments
+.label-mgc {
+    font-size: .65rem;
+    font-family: $webfont-one;
+    font-weight: 500;
+    padding: .4em .6em .3em;
+    text-transform: uppercase;
+}
+
+//round stuff
+.label-circle {
+    border-radius: 50%;
+    padding: .3rem .5rem;
+    line-height: 1;
+}
+
+.label-round {
+    @include flex-center;
+    border-radius: 50%;
+    line-height: 1;
+    float: left;
+    position: relative;
+    margin-top: .2rem;
+    margin-right: .3rem;
+}
+
+.label-circle-sm {
+    font-size: .6rem;
+    line-height: .9;
+    padding: .2rem .35rem;
+}
+
+.label-notification-count {
+    font-size: 10px;
+    position: relative;
+    margin-left: -4px;
+    top: -8px !important;
+    z-index: 2;
+}
+
+
+// Colors
+//
+// Contextual variations (linked labels get darker on :hover).
+
+.label-white {
+    @include label-variant(#fff);
+    color: $gray-light;
+    box-shadow: inset 0 0 1px lighten($gray-light,40%);
+}
+
+.label-gray {
+    color: lighten($text-color,25%);
+    @include label-variant(darken($gray-lighter,2.5%));
+    box-shadow: inset 0 0 1px lighten($gray-light,20%);
+}
+
+a.label-white:hover,
+a.label-gray:hover {
+    color: $brand-dark;
+}
+
+.label-default {
+    @include label-variant($label-default-bg);
+}
+
+.label-primary {
+    @include label-variant($label-primary-bg);
+}
+
+.label-success {
+    @include label-variant($label-success-bg);
+}
+
+.label-info {
+    @include label-variant($label-info-bg);
+}
+
+.label-warning {
+    @include label-variant($label-warning-bg);
+}
+
+.label-danger {
+    @include label-variant($label-danger-bg);
+}
+
+.label-tertiary,
+.label-orange-dark {
+    @include label-variant($brand-orange-dark);
+}
+
+.label-opaque-dark {
+    background: rgba(#000,.3);
+}
+
+.label-opaque-white,
+.label-opaque-light {
+    background: rgba(#fff,.3);
+}
+
+.label-btn {
+    position: relative;
+    padding-right: 2rem;
+    .btn-label {
+        height: 100%;
+        line-height: .1;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        width: 1.5rem;
+    }
+}
+
+// outlines
+.label-outline {
+    background: transparent;
+    border-radius: 0;
+    border-width: $border-width;
+    border-style: solid;
+    line-height: 1.25;
+}
+
+.label-outline-default {
+    @include label-outline-variant($label-default-bg);
+}
+
+.label-outline-muted {
+    @include label-outline-variant($text-muted);
+}
+
+.label-outline-primary {
+    @include label-outline-variant($label-primary-bg);
+}
+
+.label-outline-success {
+    @include label-outline-variant($label-success-bg);
+}
+
+.label-outline-info {
+    @include label-outline-variant($label-info-bg);
+}
+
+.label-outline-warning {
+    @include label-outline-variant($label-warning-bg);
+}
+
+.label-outline-danger {
+    @include label-outline-variant($label-danger-bg);
+}

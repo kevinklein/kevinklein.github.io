@@ -1,0 +1,46 @@
+.hover-reveal {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-reveal:after {
+    background: rgba(#000,.15);
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    transition: transform .15s ease-in;
+    transform: translateY(-100%);
+    z-index: -1;
+}
+
+.hover-reveal:hover {
+    box-shadow: inset 0 0 40px rgba(#000,.15);
+    &::after {
+        transform: translate(0,0);
+    }
+}
+
+.hover-reveal-item-bottom {
+    transition: transform .15s cubic-bezier(0.34, 1.61, 0.7, 1);
+    transform: translateY(100px);
+}
+
+.hover-reveal:hover .hover-reveal-item-bottom {
+    transform: translate(0,0)
+}
+
+.visibility-hover {
+    .visibility-hover-hidden {
+        opacity: 0;
+        transition: opacity .15s linear;
+    }
+    &:hover {
+        .visibility-hover-hidden {
+            opacity: 1;
+        }
+    }
+}

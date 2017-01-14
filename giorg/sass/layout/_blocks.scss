@@ -1,0 +1,161 @@
+.flex-block {
+    display: block;
+    padding-bottom: $grid-gutter-width;
+    position: relative;
+	[class*="label-flag-"] {
+    	border-radius: 0;
+		padding: 5px 8px;
+		position: absolute;
+		top: 0;
+	}
+	> .flex-block-inner {
+    	display: block;
+		margin-bottom: 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+    
+    .flex-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$grid-gutter-width;
+    }
+    
+    .flex-blocks .flex-block {
+        display: flex;
+        padding-left: $grid-gutter-width;
+    	> .flex-block-inner {
+            display: flex;
+            flex: 1 1 100%;
+            flex-direction: column;
+        }
+    }
+    
+    .flex-blocks-two > .flex-block {
+        width: 50%;
+    }
+    
+    .flex-blocks-three > .flex-block {
+        width: 33.333333%;
+    }
+    
+    .flex-blocks-four > .flex-block {
+        width: 25%;
+    }
+        
+    .flex-block-details {
+        flex: 1 0 auto;
+    }
+}
+
+.no-flexbox {
+    .flex-blocks {
+        @include clearfix;
+    }
+    .flex-block {
+        float: left;
+    }
+    .flex-block:nth-child(3n+4){
+        clear: both;
+    }
+}
+
+// for use without gutters
+.flex-blocks-group {
+    margin: 0;
+    .flex-block {
+	    padding: 0;
+    }
+}
+
+.flex-blocks-adapt {
+    .flex-block {
+        flex: 1 0 0;
+    }
+}
+
+.flex-blocks-tiles {
+    .flex-block:nth-child(4n+1) {
+        background: $brand-info;
+    }
+    .flex-block:nth-child(4n+2) {
+        background: $brand-primary;
+    }
+    .flex-block:nth-child(4n-1) {
+        background: $brand-secondary;
+    }
+    .flex-block:nth-child(4n+0) {
+        background: $brand-secondary-dark;
+    }
+}
+
+.flex-blocks-adapt-border .flex-block {
+    border-bottom: 1px solid rgba(#000,.15);
+}
+
+@include media-breakpoint-up(lg) {
+    .flex-blocks-adapt {
+        flex-wrap: wrap;
+        overflow: hidden;
+        .flex-block:not(:only-of-type) {
+            border-radius: 0;
+            margin: 0;
+            max-width: none;
+        }
+        .flex-block:nth-last-child(n+6),
+        .flex-block:nth-last-child(n+6) ~ .flex-block {
+        	flex-basis: 25%;
+        }
+        .flex-block:nth-last-child(n+8),
+        .flex-block:nth-last-child(n+8) ~ .flex-block {
+        	flex-basis: 20%;
+        }
+    }
+    .flex-blocks-adapt-border {
+        .flex-block {
+            border: 1px solid rgba(#000,.15);
+            border-left: 0;
+            border-top: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .flex-blocks-tiles {
+        .flex-block {
+            border-radius: $border-radius-sm;
+            border-bottom: 1px solid rgba(#fff,.15);
+            margin: 0 auto;
+            max-width: 66.66666%;
+        }
+        .flex-block:nth-last-child(n+7),
+        .flex-block:nth-last-child(n+7) ~ .flex-block { // if there more than 6 items make sure nothing is larger than 1/4
+        	flex-basis: 25%;
+        }
+        .flex-block:nth-last-child(n+9),
+        .flex-block:nth-last-child(n+9) ~ .flex-block { // if there more than 8 items make sure nothing is larger than 1/5
+        	flex-basis: 20%;
+        }
+        .flex-block:nth-last-child(n+11),
+        .flex-block:nth-last-child(n+11) ~ .flex-block { // if there more than 10 items hide cta at the bottom
+        	.hover-reveal-item-bottom {
+            	display: none;
+        	}
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .flex-block-1 { flex-basis: 8.333333% !important }
+    .flex-block-2 { flex-basis: 16.66666%  !important }
+    .flex-block-3 { flex-basis: 25% !important }
+    .flex-block-4 { flex-basis: 33.33333% !important }
+    .flex-block-5 { flex-basis: 41.66666% !important }
+    .flex-block-6 { flex-basis: 50% !important }
+    .flex-block-7 { flex-basis: 58.33333% !important }
+    .flex-block-8 { flex-basis: 66.66666% !important }
+    .flex-block-9 { flex-basis: 75% !important }
+    .flex-block-10 { flex-basis: 83.33333% !important  }
+    .flex-block-11 { flex-basis: 91.66666% !important }
+}

@@ -1,0 +1,17 @@
+.icon-svg,
+.icon {
+    display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	vertical-align: -.1em;
+}
+
+.btn-sm .icon {
+    padding-bottom: .05em;
+    vertical-align: -.15em;
+}
+
+.btn-xs .icon {
+    vertical-align: -.2em;
+}

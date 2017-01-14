@@ -1,0 +1,143 @@
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+    @include img-responsive();
+}
+
+.img-rounded {
+    @include border-radius($border-radius-lg);
+}
+
+.img-thumbnail {
+    padding: $thumbnail-padding;
+    line-height: $line-height;
+    background-color: $thumbnail-bg;
+    border: 1px solid $thumbnail-border;
+    border-radius: $thumbnail-border-radius;
+    transition: all .2s ease-in-out;
+    @include box-shadow(0 1px 2px rgba(0,0,0,.075));
+    
+    // Keep them at most 100% wide
+    @include img-responsive(inline-block);
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-raised,
+.raised,
+.hover-raised:hover {
+    box-shadow: 0 1px 8px rgba(0,0,0,.25);
+}
+
+.media img {
+    max-width: none;
+}
+
+.img-bio {
+    height: 50px;
+    width: 50px;
+}
+
+.img-bio-sm {
+    height: 32px;
+    width: 32px;
+}
+
+.img-cover-flex {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	a {
+    	cursor: pointer;
+		display: block;
+		height: 100%;
+		position: absolute;
+		text-decoration: none !important;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+}
+
+.img-cover-flex:before {
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+.img-cover-flex-3by1:before {
+	padding-bottom: 33.33333%;
+}
+
+.img-cover-flex-2by1:before {
+	padding-bottom: 50%;
+}
+
+.img-cover-flex-16by9:before {
+	padding-bottom: 56.25%;
+}
+
+.img-cover-flex-4by3:before {
+	padding-bottom: 75%;
+}
+
+.img-cover {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	max-height: 960px;
+	max-width: 960px;
+}
+
+.img-cover-block * {
+    background: rgba(0,0,0,.33);
+    padding: $card-spacer-y;
+}
+
+.img-cover-transtion {
+    transition: background-image 0.2s ease-in-out;
+}
+
+.img-cover-1 {
+    background-image: url(../img/faculty-bw.jpg);
+    &:hover {
+        background-image: url(../img/faculty.jpg);
+    }
+}
+
+.img-cover-2 {
+    background-image: url(../img/orlando-bw.jpg);
+    &:hover {
+        background-image: url(../img/orlando.jpg);
+    }
+}
+
+.img-cover-3 {
+    background-image: url(../img/stock3-bw.jpg);
+    &:hover {
+        background-image: url(../img/stock3.jpg);
+    }
+}
+
+.img-cover-4 {
+    background-image: url(../img/stock2-bw.jpg);
+    &:hover {
+        background-image: url(../img/stock2.jpg);
+    }
+}
+
+.img-cover-5 {
+    background-image: url(../img/meet-bw.jpg);
+    &:hover {
+        background-image: url(../img/meet.jpg);
+    }
+}
+
+.img-cover-6 {
+    background-image: url(../img/stock1-bw.jpg);
+    &:hover {
+        background-image: url(../img/stock1.jpg);
+    }
+}

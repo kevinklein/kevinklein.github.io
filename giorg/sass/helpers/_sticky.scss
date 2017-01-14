@@ -1,0 +1,6 @@
+//waypoints/sticky sidebars
+.sticky-block.stuck {
+    position: fixed;
+    top: 80px;
+    z-index: ($zindex-navbar-fixed + 2);
+}

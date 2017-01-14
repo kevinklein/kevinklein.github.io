@@ -1,0 +1,315 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  * {
+      list-style: none
+  }
+}
+
+.nav-link {
+  display: inline-block;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text and removes hover/tab effects
+  &.disabled {
+    color: $nav-disabled-link-color;
+
+    @include plain-hover-focus {
+      color: $nav-disabled-link-hover-color;
+      cursor: $cursor-disabled;
+      background-color: transparent;
+    }
+  }
+}
+
+
+// Nav inline
+
+.nav-inline {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: 1px solid $nav-tabs-border-color;
+  @include clearfix();
+
+  .nav-item {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    + .nav-item {
+      margin-left: .2rem;
+    }
+  }
+
+  .nav-link {
+    color: $gray;
+    display: block;
+    padding: $nav-link-padding;
+    border: 1px solid transparent;
+    @include border-radius($border-radius $border-radius 0 0);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+    }
+
+    &.disabled {
+      @include plain-hover-focus {
+        color: $nav-disabled-link-color;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $nav-tabs-active-link-hover-color;
+      background-color: #fff;
+      border-color: darken($nav-tabs-border-color,10%) $nav-tabs-border-color transparent $nav-tabs-border-color;
+      font-weight: 500;
+      position: relative;
+      &:after {
+          content: '';
+          box-shadow: inset 2px 0 0 2px darken($nav-tabs-border-color,5%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+      }
+    }
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  border: none;
+  .nav-item {
+    float: left;
+
+    + .nav-item {
+      margin-left: .2rem;
+    }
+  }
+
+  .nav-link {
+    display: block;
+    padding: $nav-link-padding;
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+      color: $component-active-color;
+      cursor: default;
+      background-color: $component-active-bg;
+    }
+  }
+}
+
+.nav-stacked {
+  .nav-item {
+    display: block;
+    float: none;
+
+    + .nav-item {
+      margin-top: .2rem;
+      margin-left: 0;
+    }
+  }
+}
+
+
+//
+// Tabbable tabs
+//
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+
+//
+// Dropdowns
+//
+
+.nav-tabs .dropdown-menu {
+  // Make dropdown border overlap tab border
+  margin-top: -1px;
+  // Remove the top rounded corners here since there is a hard edge above the menu
+  @include border-top-radius(0);
+}
+
+// misc overrides
+
+@include media-breakpoint-down(sm) {
+    .nav-tabs .nav-item +.nav-item {
+        margin-bottom: .35rem; // give tabs some bottom margin when they become stacked on small screens
+    }    
+}
+
+.card .nav-tabs {
+    .nav-link.active,
+    .nav-item.open .nav-link {
+        background: #fff;
+    }
+}
+
+//.nav-flex
+.nav-horizontal {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    > li {
+        margin: 0;
+        padding: 0 .6rem;
+    }
+    > li > a,
+    > li > span {
+        color: rgba(#000,.44);
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+    .active,
+    a:focus,
+    span:focus {
+        color: $brand-primary !important;
+        text-decoration: none !important;
+    }
+    .active {
+        font-weight: 700;
+    }
+}
+
+// Lines,
+.nav-lines {
+    border-bottom: 1px solid $nav-tabs-border-color;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    > li {
+        margin: 0 0 -1px;
+        padding: 0 .6rem;
+    }
+    > li > a,
+    > li > span {
+        border-bottom: 1px solid transparent;
+        color: rgba(#000,.44);
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        padding: .5rem 0;
+        position: relative;
+    }
+    > li:hover {
+        border-color: #888;
+        > a {
+            background: none;
+            border-color: $brand-black;
+            color: $brand-black;
+            text-decoration: none;
+        }
+    }
+    .active,
+    a:focus,
+    span:focus {
+        border-color: $brand-primary;
+        color: $brand-primary;
+        text-decoration: none;
+    }
+    .active:after {
+        background-color: $brand-primary;
+        content: '';
+        left: 0;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.nav-centered,
+.nav-lines-centered {
+    justify-content: center;
+}
+
+.no-flexbox .nav-lines {
+    display: table;
+    width: 100%;
+    > li {
+        display: table-cell;
+    }
+    > li > a,
+    > li > span {
+        display: block;
+    }   
+}
+
+@include media-breakpoint-down(sm) {
+    .nav-responsive {
+        > li {
+            float: none;
+            display: inline-block;
+        }
+    }
+}
+
+.nav-primary {
+    float: right;
+    display: table;
+    > li {
+        display: table-cell;
+    }
+    > li > a,
+    > li > span {
+        color: darken($brand-secondary-dark,10%);
+        display: block;
+        font-family: $webfont-two;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: $spacer-y $spacer-x;
+        @include hover-focus {
+            text-decoration: none;
+        }
+    }   
+}

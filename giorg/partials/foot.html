@@ -1,0 +1,15 @@
+<script>
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "svg/symbol-defs.svg", true);
+ajax.send();
+ajax.onload = function(e) {
+  var div = document.createElement("div");
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+}
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script type="text/javascript" src="js/matchHeight.js"></script>
+<script type="text/javascript" src="js/vendor/tether.min.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script> 

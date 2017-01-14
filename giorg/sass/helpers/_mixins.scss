@@ -1,0 +1,149 @@
+@mixin border-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    transition: $transition;
+  }
+}
+
+// Utilities
+@import "mixins/breakpoints";
+@import "mixins/hide-text";
+@import "mixins/hover";
+@import "mixins/image";
+@import "mixins/label";
+@import "mixins/reset-filter";
+@import "mixins/resize";
+@import "mixins/responsive-visibility";
+@import "mixins/screen-reader";
+@import "mixins/size";
+@import "mixins/tab-focus";
+@import "mixins/reset-text";
+@import "mixins/text-emphasis";
+@import "mixins/text-truncate";
+
+// // Components
+@import "mixins/alert";
+@import "mixins/buttons";
+@import "mixins/pagination";
+@import "mixins/list-group";
+@import "mixins/nav-divider";
+@import "mixins/forms";
+@import "mixins/progress";
+@import "mixins/table-row";
+
+// // Skins
+@import "mixins/background-variant";
+@import "mixins/border-radius";
+@import "mixins/gradients";
+
+// // Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+// @import "mixins/navbar-align";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/pulls";
+
+@mixin fontawesome {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin vertically-align {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin shadow {
+    //box-shadow: 0 1px 4px rgba(0,0,0,.2), 0 0 0 1px rgba(#000,.05);
+    //box-shadow: 0 1px 4px rgba(0,0,0,.1), 0 0 0 1px rgba(#000,.1);
+    //box-shadow: inset 0 0 0 1px rgba(#000,.15), 0 0 0 #fff;
+    //box-shadow: 0 0 0 #fff, inset 0 0 0 1px rgba(#000,.15);
+    border: 1px solid rgba(#000,.15);
+}
+
+@mixin shadow-lg {
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+}
+
+//@mixin margin-top {
+//	margin-top: $spacer !important;
+//}
+//
+//@mixin margin-top-negative {
+//	margin-top: -$spacer !important;
+//}
+//
+//@mixin margin-top-sm {
+//	margin-top: ($spacer / 2) !important;
+//}
+//
+//@mixin margin-top-lg {
+//	margin-top: ($spacer * 2) !important;
+//}
+//
+//@mixin margin-bottom {
+//	margin-bottom: $spacer !important;
+//}
+//
+//@mixin margin-bottom-sm {
+//	margin-bottom: ($spacer / 2) !important;
+//}
+//
+//@mixin margin-bottom-lg {
+//	margin-bottom: ($spacer * 2) !important;
+//}
+//
+//@mixin margin-right {
+//	margin-right: ($spacer / 2) !important;
+//}
+//
+//@mixin margin-left {
+//	margin-left: ($spacer / 2) !important;
+//}
+//
+//@mixin margin-collapse {
+//    margin-bottom: 0 !important;
+//	margin-top: 0 !important;
+//}
+
+@mixin uc {
+    font: {
+        family: $webfont-one;
+        size: .8rem;
+        weight: 500;
+    }
+    text-transform: uppercase;
+}
+
+// Progress bars
+@mixin progress-bar-variant($color) {
+  background-color: $color;
+
+  // Deprecated parent class requirement as of v3.2.0
+  .progress-striped & {
+    @include gradient-striped;
+  }
+}

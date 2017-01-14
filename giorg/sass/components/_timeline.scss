@@ -1,0 +1,175 @@
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline-tick {
+    background: #fff;
+    border: 2px solid $gray-lighter;
+    border-radius: 50%;
+    display: block;
+    height: 1rem;
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    width: 1rem;
+    z-index: 2;
+    top: -1.4rem;
+    left: 50%;
+}
+
+.timeline-icon {
+    background: $gray-lighter;
+    color: $gray-light;
+    height: 1.6em;
+    width: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-horizontal {
+    display: table;
+    padding-top: 1rem;
+    width: 100%;
+    table-layout: fixed;
+    &:after {
+        background: rgba(0,0,0,.2);
+        content: '';
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        height: 1px;
+        z-index: 1;
+    }
+    > li {
+        position: relative;
+        text-align: center;
+        display: table-cell;
+        width: 100%;
+    }
+    .timeline-tick {
+        border-color: lighten($gray-light,10%);
+        text-align: center;
+        margin-left: -.5rem;
+        &.timeline-tick-active {
+            background: $text-color;
+            border-color: $text-color; 
+            color: #fff;
+        }
+        &.timeline-tick-completed {
+            background: $brand-success;
+            border-color: $brand-success;
+            color: #fff;
+        }
+    }
+    .timeline-icon {
+        margin-left: -.7rem;
+        height: 1.4rem;
+        width: 1.4rem;
+        top: -1.6rem;
+        border: none;
+        font-size: .9rem;
+        line-height: 1.6rem;
+    }
+    .active {
+        font-weight: bold;
+    }
+    a {
+        color: $text-color;
+        &:hover {
+            color: $gray-light;
+        }
+    }
+}
+
+.timeline-vertical {
+    &:after {
+        background: $gray-lighter;
+        content: '';
+        height: 100%;
+        left: 1.55rem;
+        position: absolute;
+        top: 0;
+        width: .3rem;
+        z-index: 1;
+    }
+    .timeline-tick {
+        left: 1.15rem;
+        top: .5rem;
+    }
+    .timeline-icon {
+        border: none;
+        line-height: 1.6rem;
+        left: .95rem;
+        top: .5rem;
+    }
+    .timeline-event {
+        padding-left: 4rem;
+        padding-top: .5rem;
+        position: relative;
+        + .timeline-event {
+            margin-top: 2rem;
+        }
+    }
+    .timeline-item p {
+        font-size: .9rem;
+        margin-bottom: .7rem;
+    }
+}
+
+.timeline-vertical-dates {
+    a:focus,
+    a:active {
+        outline: none;
+        text-decoration: none;
+    }
+    &:after {
+        background: darken($gray-lighter,7.5%);
+        left: 56px;
+        width: 1px;
+    }
+    .timeline-event {
+        padding-left: 70px;
+    }
+    .timeline-event + .timeline-event {
+        margin-top: 0;
+    }
+    .timeline-date {
+        color: $gray-light;
+        font-size: .6rem;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        top: 11px;
+        &:after {
+            background: darken($gray-lighter,15%);
+            border-radius: 50%;
+            content: '';
+            height: 9px;
+            left: 52px;
+            position: absolute;
+            top: 2px;
+            width: 9px;
+            z-index: 2;
+        }
+    }
+    .timeline-item {
+        min-height: 27px;
+    }
+}
+
+.timeline-vertical-dates .active {
+    .timeline-date,
+    .timeline-item {
+        color: $brand-black;
+        font-weight: 500;
+    }
+    .timeline-date:after {
+        background: $brand-primary;
+    }
+}

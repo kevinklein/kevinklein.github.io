@@ -1,0 +1,359 @@
+// The dropdown wrapper (div)
+.dropup,
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  // Generate the caret automatically
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .25rem;
+    vertical-align: middle;
+    content: "";
+    border-top: $caret-width solid;
+    border-right: $caret-width solid transparent;
+    border-left: $caret-width solid transparent;
+  }
+
+  // Prevent the focus on the dropdown toggle when closing dropdowns
+  &:focus {
+    outline: 0;
+  }
+}
+
+.dropdown-toggle-sm:after {
+    border-top: ($caret-width / 1.5) solid;
+    border-right: ($caret-width / 1.5) solid transparent;
+    border-left: ($caret-width / 1.5) solid transparent;
+    
+}
+
+.dropdown-toggle-absolute {
+    position: relative;
+}
+
+.dropdown-toggle-absolute:after {
+    position: absolute;
+    top: 50%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $zindex-dropdown;
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0; // override default ul
+    font-size: $font-size-base;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    list-style: none;
+    background-color: $dropdown-bg;
+    background-clip: padding-box;
+    @include border-radius($border-radius-sm);
+    box-shadow: 0 0 0 1px rgba(0, 0, 20, 0.1), 0 5px 20px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+// animate dropdowns 
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+    transform: scale(1,0);
+    transition: transform .2s cubic-bezier(0.34, 1.61, 0.7, 1);
+    transform-origin: 50% 0%;
+}
+
+.dropdown-menu.in,
+.open > .dropdown-menu {
+    transform: scale(1,1);  
+    opacity: 1;
+}
+
+.dropdown-menu.collapsing,
+.user-notifications.collapsing {
+    transition-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
+    transition-duration: .15s;
+    transition-property: height;
+}
+
+// Dividers (basically an hr) within the dropdown
+.dropdown-divider {
+    @include nav-divider($dropdown-divider-bg);
+}
+
+// Links, buttons, and more within the dropdown menu
+.dropdown-item {
+    display: block;
+    padding: 3px 20px;
+    font-size: .9rem;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    
+    // For `<button>`s
+    text-align: inherit;
+    width: 100%;
+    background: none;
+    border: 0;
+    
+    @include hover-focus {
+        color: $dropdown-link-hover-color;
+        text-decoration: none;
+        background-color: $dropdown-link-hover-bg;
+    }
+    
+    // Active state
+    &.active {
+        @include plain-hover-focus {
+            color: $dropdown-link-active-color;
+            text-decoration: none;
+            background-color: $dropdown-link-active-bg;
+            outline: 0;
+        }
+    }
+    
+    // Disabled state
+    //
+    // Gray out text and ensure the hover/focus state remains gray
+    &.disabled {
+        @include plain-hover-focus {
+        color: $dropdown-link-disabled-color;
+    }
+    
+    // Nuke hover/focus effects
+    @include hover-focus {
+            text-decoration: none;
+            cursor: $cursor-disabled;
+            background-color: transparent;
+            background-image: none; // Remove CSS gradient
+            @include reset-filter();
+        }
+    }
+}
+
+.dropdown-item-light {
+    color: darken($gray-light,5%);
+    &:hover {
+        background: $gray-lighter;
+        color: $gray-darker;
+    }
+}
+
+.dropdown-item-wrap {
+    white-space: normal;
+}
+
+.dropdown-item-sm {
+    font-size: .75rem;
+    line-height: 1.35;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    white-space: normal;
+}
+
+// Open state for the dropdown
+.open {
+  // Show the menu
+    > .dropdown-menu {
+        display: block;
+    }
+
+  // Remove the outline when :focus is triggered
+    > a {
+        outline: 0;
+    }
+}
+
+// Menu positioning
+//
+// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+// menu with the parent.
+.dropdown-menu-right {
+    right: 0;
+    left: auto; // Reset the default from `.dropdown-menu`
+}
+// This is only for left-aligning a dropdown menu within a `.navbar-right` or
+// `.pull-right` nav component.
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+
+// Dropdown section headers
+.dropdown-header {
+    display: block;
+    padding: 3px 20px;
+    font-size: $font-size-sm;
+    line-height: $line-height;
+    color: $dropdown-header-color;
+    white-space: nowrap; // as with > li > a
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+.dropdown-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ($zindex-dropdown - 10);
+}
+
+// Right aligned dropdowns
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+.dropdown-header {
+    font-family: $webfont-one;
+    font-size: .7rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+// lists/legacy
+.dropdown-menu {
+    ul, ol {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    ol {
+        counter-reset: li;
+        li {
+            position: relative;
+        }
+        li:before {
+            background: #ccc;
+            border-radius: 50%;
+            color: #000;
+        	content: counter(li);
+        	counter-increment: li;
+        	font-size: .6rem;
+        	font-weight: normal;
+        	height: 1rem;
+        	width: 1rem;
+        	text-align: center;
+        	position: absolute;
+        	left: 17px;
+        	top: .4rem;
+        	transition: all linear .15s;
+        	@include flex-center;
+        }
+        .dropdown-item {
+            padding-left: 40px;
+        }
+    }
+}
+
+// dropdown permutations
+.dropdown-menu-inverse {
+    background: $gray-dark;
+    .dropdown-header {
+        background: $gray-darker;
+        color: #bbb;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+        &:first-child {
+            margin-top: -5px;
+        }
+    }
+    .dropdown-item {
+        color: #eee;
+        &:hover {
+            color: #fff;
+            background: $gray;
+        }
+        &.active {
+            background: $brand-info;
+        }
+    }
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    border-top-color: transparent;
+    border-bottom: $caret-width solid;
+    margin-top: -$caret-width;
+}
+
+//this is for the user notifaction dropdown 
+.dropdown-black,
+.dropdown-inverse {
+    background: $gray-dark;
+    border-radius: 0 0 0 $border-radius-sm;
+    padding: .65rem;
+    position: absolute;
+    text-align: left;
+    right: 0;
+    top: 100%;
+    width: 16rem;
+    z-index: $zindex-modal-bg;
+}
+
+.dropdown-menu-lg,
+.dropdown-lg {
+    width: 32rem;
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar-top-btn + .dropdown-black {
+        top: auto;
+        z-index: ($zindex-modal - 2);
+    }
+}
+
+.dropdown-black-inner,
+.user-notifications-overflow {
+    background: #eee;
+    margin-bottom: .5rem;
+    text-align: left;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        color: #999;
+        margin: 0;
+        padding-bottom: .35rem;
+        padding-top: .35rem;
+        font-size: .7rem;
+    }
+    a {
+        color: #777;
+        display: block;
+        line-height: 1.3;
+        strong {
+            color: $brand-dark;
+            display: block;
+            font-size: .8rem;
+        }
+    }
+}
+
+.dropdown-black-inner {
+    padding: .65rem;
+}
+
+.user-notifications-overflow {
+    padding: .65rem;
+    max-height: 225px;
+    overflow: auto;
+}

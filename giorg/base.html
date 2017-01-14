@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>American College of Gastroenterology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lato:300,400,400i,500,500i,700" rel="stylesheet">
+</head>
+<body class="fixed-top flex-body">
+
+<div class="inc:partials/header.html"></div>
+
+<div class="flex-content"> 
+    
+<!--
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="#"><svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg> ACG Home</a></li>
+                <li class="current"><b>Page</b></li>
+            </ol>
+        </div>
+    </nav>
+-->
+    <div class="container-full">
+        <div class="container container-lg">
+            
+            
+            
+        </div><!--/container-ui--> 
+        
+    </div><!--/container-full--> 
+ 
+</div><!-- /flex-content -->    
+
+<div class="inc:partials/footer.html"></div>
+<script>
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "svg/symbol-defs.svg", true);
+ajax.send();
+ajax.onload = function(e) {
+  var div = document.createElement("div");
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+}
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+<script type="text/javascript" src="js/matchHeight.js"></script>
+<script type="text/javascript" src="js/vendor/tether.min.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>   
+<script type="text/javascript">(function(a){a.fn.inc=function(b,c,d,e){return this.length&&b?this.each(function(){e=a(this);a.ajax({url:b,success:function(f,g,h){e.html(a.isFunction(c)?c(f,b):f);a.isFunction(d)&&d(b,g,h)}})}):this};a(function(){a('[class*="inc:"]').each(function(){var b=/inc:(\S+)/.exec(this.className||"");b&&a(this).inc(unescape(b[1]))})})})(jQuery);</script>
+</body>
+</html>
