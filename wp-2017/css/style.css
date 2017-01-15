@@ -2064,7 +2064,8 @@ hr {
 .ui-slider-tabs-list {
   padding: 0;
   margin: 20px auto 0 !important;
-  list-style: none; }
+  list-style: none;
+  width: auto !important; }
 
 .ui-slider-tabs-list li {
   display: inline-block;
