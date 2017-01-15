@@ -145,7 +145,8 @@
         position: absolute;
         width: 200px;
     }
-    .sell-item-1 {
+    .sell-item-1,
+    .sell-item-1-b {
         top: 90px;
         left: -10px;
         img {
@@ -159,12 +160,17 @@
             width: 100px;
         }
     }
-    .sell-item-3 {
+    .sell-item-3,
+    .sell-item-3-b {
         top: 100px;
         right: -10px;
         img {
             width: 92px;
         }
+    }
+    .sell-item-1-b,
+    .sell-item-3-b {
+        top: 125px;
     }
     .sell-item-4 {
         bottom: 115px;
