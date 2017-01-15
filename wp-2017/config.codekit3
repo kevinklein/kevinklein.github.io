@@ -35,6 +35,16 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/assets\/icons-3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/icons-3.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/janpaepke-ScrollMagic-ae215ee\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
@@ -2140,6 +2150,12 @@
 		"oAP": "\/assets\/members.psd",
 		"oF": 0
 		},
+	"\/assets\/pattern.ai": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/pattern.ai",
+		"oF": 0
+		},
 	"\/assets\/webfontkit-20170107-140922\/generator_config.txt": {
 		"ft": 8192,
 		"oA": 2,
@@ -2640,19 +2656,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/components\/_cards.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/components\/_cards.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/components\/_fonts.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2796,26 +2799,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/css\/site-min.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/css\/site-min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/site.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/site-min.css",
-		"oF": 1,
-		"oS": 3
-		},
 	"\/css\/style.css": {
 		"aP": 0,
 		"bl": 0,
@@ -2847,6 +2830,82 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/hummingbird.png": {
+		"ft": 32768,
+		"iS": 15810,
+		"oA": 0,
+		"oAP": "\/img\/hummingbird.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/icons-1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons-3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-3.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons-4.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-4.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons-5.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-5.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons-6.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons-6.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/iffat.png": {
+		"ft": 32768,
+		"iS": 19644,
+		"oA": 0,
+		"oAP": "\/img\/iffat.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/img-urmila.jpg": {
 		"ft": 16384,
 		"iS": 67875,
@@ -2863,11 +2922,29 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/laptop.png": {
+		"ft": 32768,
+		"iS": 288722,
+		"oA": 0,
+		"oAP": "\/img\/laptop.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/logo_horizontal.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/logo_horizontal.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/map-circles.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/map-circles.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2897,35 +2974,37 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/person-goodall.jpg": {
-		"ft": 16384,
-		"iS": 42558,
+	"\/img\/olanike.png": {
+		"ft": 32768,
+		"iS": 19277,
 		"oA": 0,
-		"oAP": "\/img\/person-goodall.jpg",
+		"oAP": "\/img\/olanike.png",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/person-henderson.jpg": {
-		"ft": 16384,
-		"iS": 53572,
+	"\/img\/olutosin.png": {
+		"ft": 32768,
+		"iS": 18812,
 		"oA": 0,
-		"oAP": "\/img\/person-henderson.jpg",
+		"oAP": "\/img\/olutosin.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
-	"\/img\/person-miambo.jpg": {
-		"ft": 16384,
-		"iS": 6068,
-		"oA": 0,
-		"oAP": "\/img\/person-miambo.jpg",
+	"\/img\/pattern.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/pattern.svg",
 		"oF": 0,
-		"opt": 1
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
-	"\/img\/person-urmilla.jpg": {
-		"ft": 16384,
-		"iS": 5310,
+	"\/img\/sarah.png": {
+		"ft": 32768,
+		"iS": 17753,
 		"oA": 0,
-		"oAP": "\/img\/person-urmilla.jpg",
+		"oAP": "\/img\/sarah.png",
 		"oF": 0,
 		"opt": 0
 		},
@@ -2936,6 +3015,30 @@
 		"oAP": "\/img\/section1.jpg",
 		"oF": 0,
 		"opt": 1
+		},
+	"\/img\/sisterzeph.png": {
+		"ft": 32768,
+		"iS": 19842,
+		"oA": 0,
+		"oAP": "\/img\/sisterzeph.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/tam.png": {
+		"ft": 32768,
+		"iS": 18852,
+		"oA": 0,
+		"oAP": "\/img\/tam.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/urmila.png": {
+		"ft": 32768,
+		"iS": 18378,
+		"oA": 0,
+		"oAP": "\/img\/urmila.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -2969,21 +3072,6 @@
 		"oF": 1,
 		"sC": 0,
 		"tS": 0
-		},
-	"\/js\/slick.min.js": {
-		"ft": 64,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "\/js\/slick.min-min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/site.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/site.html",
-		"oF": 0
 		}
 	},
 "hooks": [

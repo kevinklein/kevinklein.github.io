@@ -6,8 +6,12 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, b {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Campton-Bold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -71,7 +75,7 @@ p {
 }
 
 .text-noto {
-    font-family: "Noto Serif", Georgia, "Times New Roman", "DejaVu Serif", serif;
+    font-family: "Noto Serif", Georgia, "Times New Roman", serif;
 }
 
 .text-medium {
@@ -150,11 +154,21 @@ p {
 }
 
 .text-x-lg {
-    font-size: $font-size-x-lg;
+    font-size: $font-size-lg;
+}
+
+@media screen and (min-width: 48em) {
+    .text-x-lg {
+        font-size: $font-size-x-lg;
+    }
 }
 
 a {
     text-decoration: none;
+}
+
+.link-underline {
+    text-decoration: underline;
 }
 
 .text-underline {

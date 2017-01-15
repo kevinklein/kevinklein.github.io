@@ -38,7 +38,7 @@
 			panelArrowsShowOnHover: false,
 			tabs: true,
 			tabHeight: 165,
-			tabArrows: true,
+			tabArrows: false,
 			tabSlideLength: 100,
 			tabSlideSpeed: 200,
 			transition: 'slide',

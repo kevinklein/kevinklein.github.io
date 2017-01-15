@@ -8,91 +8,49 @@
     background-color: #961e23
 }
 
+@media screen and (max-width: 47.9em) {
+    #footer {
+        padding: 10% 2%;
+    }
+}
+
 #footer a {
     color: #FFF;
     text-decoration: none
 }
 
-#footer .pane-panels-mini.pane-footer {
+#footer > div {
     max-width: 1280px;
     margin: 0 auto
 }
 
-#footer .pane-content .flex-container {
-    -ms-display: flex;
-    -webkit-display: flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center
-}
-
-#footer .pane-content .flex-container .column-1 {
-    -webkit-flex: 4;
-    -ms-flex: 4;
-    flex: 4;
-    padding-right: 4%;
-    -webkit-display: flex;
-    -ms-display: flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-}
-
-#footer .pane-content .flex-container .column-1 .l-centered {
-    padding: 0;
-    width: 100%
-}
-
-#footer .pane-content .flex-container .column-1 .panel-pane.pane-menu-menu-wp-footer-menu .pane-content {
-    -moz-column-count: 2;
-    -moz-column-gap: 59px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 59px;
-    column-count: 2;
-    column-gap: 59px;
-    width: 100%
-}
-
-#footer .pane-content .flex-container .column-1 .panel-pane.pane-menu-menu-wp-footer-menu .pane-content ul {
+#footer ul {
     margin: 0;
     padding: 0;
     list-style: none
 }
 
-#footer .pane-content .flex-container .column-1 .panel-pane.pane-menu-menu-wp-footer-menu .pane-content ul li {
-    margin-bottom: .66em;
+#footer ul li {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
     padding: 0;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif;
     display: list-item;
     list-style: none
 }
 
-#footer .pane-content .flex-container .column-1 .panel-pane.pane-menu-menu-wp-footer-menu .pane-content ul li a {
+#footer ul li a {
     color: #FFF;
     font-size: 1rem;
     text-decoration: none
 }
 
-#footer .pane-content .flex-container .column-1 .panel-pane.pane-menu-menu-wp-footer-menu .pane-content ul li a:hover {
+#footer ul li a:hover {
     background-color: transparent
 }
 
-#footer .pane-content .flex-container .column-2 {
-    -webkit-flex: 4;
-    -ms-flex: 4;
-    flex: 4
-}
-
-#footer .pane-content .flex-container .column-2 .l-centered {
-    padding: 0;
-    width: 100%
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane h2.pane-title {
+#footer h2 {
     color: #FFF;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif;
     font-size: 1rem;
@@ -103,40 +61,7 @@
     margin-bottom: .625em
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane .mailchimp-signup-subscribe-form-description {
-    margin-bottom: .625em
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form {
-    max-width: 500px
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form .form-item {
-    margin: 0
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div {
-    -ms-display: flex;
-    -webkit-display: flex;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    width: 100%
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div .form-type-textfield {
-    flex: 1
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div .form-type-textfield:first-child {
-    margin-right: .5em
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div .form-type-emailfield {
-    width: 100%
-}
-
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div label {
+#footer form label {
     color: #000;
     font-size: .875rem;
     margin-bottom: .5em;
@@ -145,8 +70,8 @@
     padding: 0
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div input[type=text],
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div input[type=email] {
+#footer form input[type=text],
+#footer form input[type=email] {
     margin-bottom: .5em;
     color: #000;
     font-size: .875em;
@@ -154,32 +79,42 @@
     outline: none;
     padding-left: .5rem;
     font-style: italic;
+    font-size: 12px;
     font-weight: 400;
     border: 0;
     border-radius: 0;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div::-webkit-input-placeholder {
+#footer form input::-webkit-input-placeholder {
+    color: #000;
+    font-size: 12px;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div:-moz-placeholder {
+#footer form input:-moz-placeholder {
+    color: #000;
+    font-size: 12px;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div::-moz-placeholder {
+#footer form input::-moz-placeholder {
+    color: #000;
+    font-size: 12px;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form div:-ms-input-placeholder {
+#footer form input:-ms-input-placeholder {
+    color: #000;
+    font-size: 12px;
     font-family: "Campton-Book", Helvetica, Arial, "Nimbus Sans L", sans-serif
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form input[type=submit] {
+#footer form input[type=submit] {
     border: .125rem solid #FFF;
     background-color: transparent;
     background-image: none;
+    box-sizing: border-box;
     font-family: "Campton-SemiBold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
     border-radius: 3.125rem;
     color: #FFF;
@@ -187,54 +122,30 @@
     text-transform: capitalize;
     font-size: 1rem;
     padding: 5px 15px;
-    min-width: 9.0625em;
     max-height: 2.1875em;
     letter-spacing: 0;
-    margin: .5em 0 0 0
+    margin: .5em 0 0 0;
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form .form-item label {
-    text-indent: -100000px;
-    line-height: 0
+#footer .mailchimp-signup-subscribe-form-description {
+    margin-bottom: .625em
 }
 
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form .form-item-mergevars-TITLE,
-#footer .pane-content .flex-container .column-2 .footer-content .panel-pane form .form-item-mergevars-COMPANY {
-    display: none
-}
-
-#footer .pane-content .flex-container .column-3 {
-    -webkit-display: flex;
-    -ms-display: flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
-    -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
-    padding-left: 3%
-}
-
-#footer .pane-content .flex-container .column-3 .l-centered {
-    padding: 0;
-    width: 100%
-}
-
-#footer .row-2 {
-    padding: 1em 0 2em 0;
-    font-size: 0.75em;
-    color: #ddd2d2;
-    border-top: 1px solid #0e0b0b
-}
-
-#footer .footer-content>.menu {
-    list-style: none;
+#footer .form-item {
+    float: right;
     margin: 0;
-    padding: 0 0 1em 0
+    width: 33.5%;
+    input {
+        width: 100%;
+    }
+    &:first-child {
+        float: left;
+        width: 65%;
+    }
 }
 
-#footer .footer-content>.menu a {
-    text-decoration: none;
-    display: block
+#footer .form-type-emailfield {
+    clear: both;
+    display: block;
+    width: 100%;
 }

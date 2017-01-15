@@ -22,37 +22,6 @@ img {
     border-radius: 50%;
 }
 
-.img-border {
-    border: solid 17px rgba(#000,.15);
-}
-
-@media screen and (max-width: 48em) {
-    .buttons-cta {
-        margin-top: 60px;
-    }   
-}
-
-.circle-icon {
-    @include flex-center();
-    border: 2px solid $orange;
-    color: $orange;
-    font-size: 38px;
-    width: 50px;
-    height: 50px;
-    line-height: 1;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.timeline-circle {
-    @include flex-center();
-    background: url(../img/timeline-circle.png) no-repeat 50% 50%;
-    background-size: 237px 237px;
-    margin: 0 auto;
-    height: 237px;
-    width: 237px;
-}
-
 .position-relative {
     position: relative;
 }
@@ -60,18 +29,22 @@ img {
 .position-absolute {
     display: block;
     position: absolute;
-    top: 3px;
+}
+
+.position-absolute-top {
+    top: 0; 
+}
+
+.position-absolute-bottom {
+    bottom: 0; 
 }
 
 .position-absolute-left {
-    -webkit-transform: translate(-10px,0);
-    transform: translate(-10px,0);
-    right: 100%; 
+    left: 0; 
 }
 
 .position-absolute-right {
-    margin-left: 10px;
-    left: 100%; 
+    right: 0; 
 }
 
 hr {
@@ -171,16 +144,5 @@ hr {
     br.hidden-xs,
     br.hidden-sm {
         display: inline !important;
-    }
-}
-
-@media screen and (max-width: 48em) {
-    .section-parallax,
-    .slick-track {
-        overflow: hidden;
-    }  
-    .text-intro {
-        top: -50px !important;
-        position: relative;
     }
 }

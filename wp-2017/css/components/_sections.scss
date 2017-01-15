@@ -7,7 +7,6 @@
 #header a#logo {
     display: block;
     width: 175px;
-    max-width: 40%;
     text-indent: -1000px;
     overflow: hidden;
     height: 43px;
@@ -38,6 +37,12 @@
     background: transparent;
     background-position: 50% 50%;
     height: calc(100vh - 100px);
+}
+
+@media screen and (max-width: 48em) {
+    .section-parallax {
+        overflow: hidden;
+    }  
 }
 
 @media screen and (max-width: 60em) {
@@ -82,6 +87,13 @@
     background-size: 598px 304px;
 }
 
+.section-pattern {
+    background-image: url(../img/pattern.svg);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 24px 24px;
+}
+
 .members {
     background: url(../img/members.png) no-repeat 50% 50%;
     background-size: cover;
@@ -94,13 +106,25 @@
     top: 8px;
 }
 
-.img-items {
+.sell-item {
+    color: #64665d;
+    font-size: 14px;
+    padding: 0 2% 7% 2%;
+    text-align: center;
+    b {
+        display: block;
+        font-family: "Campton-Bold", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    }
     img {
-        vertical-align: middle;
+        margin-bottom: 12px;
+        width: 36%;
     }
 }
 
 @media screen and (max-width: 47.9em) {
+    .meet-pic {
+        height: 200px;
+    }
     .members-img {
         display: none;
     }
@@ -116,19 +140,44 @@
 }
 
 @media screen and (min-width: 48em) {
+    .sell-item {
+        padding: 0;
+        position: absolute;
+        width: 200px;
+    }
+    .sell-item-1 {
+        top: 90px;
+        left: -10px;
+        img {
+            width: 80px;
+        }
+    }
+    .sell-item-2 {
+        bottom: 115px;
+        left: -10px;
+        img {
+            width: 100px;
+        }
+    }
+    .sell-item-3 {
+        top: 100px;
+        right: -10px;
+        img {
+            width: 92px;
+        }
+    }
+    .sell-item-4 {
+        bottom: 115px;
+        right: -10px;
+        img {
+            width: 78px;
+        }
+    }
     .members-img {
         display: block;
     }
     .members {
         display: none;
-    }
-    .display-table {
-        display: table;
-        width: 100%;
-        > div {
-            display: table-cell;
-            vertical-align: middle;
-        }
     }
     .container {
         margin: 0 auto;
