@@ -23,16 +23,14 @@
 		height: 100%;
 		min-height: 100%;
 		margin: 0;
-		padding: 0;
+		padding: 25px;
 		text-align: left;
 	}
 	.container {
-		background: url(bg-repeater.png) repeat-x 0 0;
-		height: 100%;
-		min-height: 100%;
-		font-size: 14px;
-		padding: 10px 25px;
-		text-align: left;
+		box-shadow: 0 0 10px rgba(0,0,0,.25);
+		border-radius: 5px;
+		margin: 0;
+		padding: 0;
 	}
 	.breadcrumb {
 		font-size: 12px;
@@ -40,22 +38,26 @@
 	}
 	.breadcrumb a {
 		color: #999;
+		margin-bottom: 10px;
 		text-decoration: none;
 	}
 	.header {
-		background: #f8fafd;
-		padding: 10px 25px;
+		background: #f8fafd url(bg-repeater.png) repeat-x 0 0;
+		border-bottom: 1px solid #ccc;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		padding: 25px 25px 20px;
 	}
 	.main {
-		padding: 10px 0 35px 0;
+		padding: 10px 25px 35px 25px;
 	}
 	.footer {
 		background: url(bg-repeater.png) repeat-x 0 0;
-		margin-top: auto;
 		padding: 25px;
 	}
 	.footer h4 {
 		font: bold 11px/13px Georgia, serif;
+		margin: 0;
 	}
 	</style>
 
@@ -63,24 +65,27 @@
 
 <body>
 
-	<header class="header">
-		<a href="#"><img src="logo.png" width="350"></a>
-	</header>
-
 	<div class="container">
 
-		<div class="breadcrumb">
-			<a href="#">AOPA Admin</a> / <a href="#">Parent</a> / <span class="current">Current Page</span>
-		</div>
+		<header class="header">
+			<a href="#"><img src="logo.png" width="350"></a>
+		</header>
 
 		<main class="main">
+
+			<div class="breadcrumb">
+				<a href="#">AOPA Admin</a> / <a href="#">Parent</a> / <span class="current">Current Page</span>
+			</div>
+		
 			Content
+
 		</main>
 
-	</div>
+		<footer class="footer">
+			<h4>THE AMERICAN ORTHOTIC & PROSTHETIC ASSOCIATION</h4>
+		</footer>
 
-	<footer class="footer">
-		<h4>THE AMERICAN ORTHOTIC & PROSTHETIC ASSOCIATION</h4>
-	</footer>
+	</div>
+	
 </body>
 </html>
